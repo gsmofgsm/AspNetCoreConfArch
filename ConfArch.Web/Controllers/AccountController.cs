@@ -55,5 +55,11 @@ namespace ConfArch.Web.Controllers
             return LocalRedirect(model.ReturnUrl); // LocalRedirect ensures redirect only to url of our application
             // this protects open redirection attacks
         }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return Redirect("/");
+        }
     }
 }
