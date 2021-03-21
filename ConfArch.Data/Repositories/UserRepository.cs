@@ -19,7 +19,16 @@ namespace ConfArch.Data.Repositories
                 FavoriteColor = "blue",
                 Role = "Admin",
                 GoogleId = "101517359495305583936"
-            }
+            },
+            new User
+            {
+                Id = 3522,
+                Name = "roland",
+                Password = "K7gNU3sdo+OL0wNhqoVWhr3g6s1xYv72ol/pe/Unols=",  // secret
+                FavoriteColor = "blue",
+                Role = "Admin",
+                GoogleId = "116701872871324111647"
+            },
         };
 
         public User GetByUsernameAndPassword(string username, string password)
